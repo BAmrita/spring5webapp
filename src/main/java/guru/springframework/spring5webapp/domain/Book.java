@@ -18,12 +18,14 @@ public class Book {
 	inverseJoinColumns = @JoinColumn(name="author_id"))
 	private Set<Author> authors= new HashSet<Author>();
 
-	public Long getId() {
-		return Id;
+	public Book(String title, String isBn) {
+		super();
+		this.title = title;
+		this.isBn = isBn;
 	}
 
-	public void setId(Long id) {
-		Id = id;
+	public Long getId() {
+		return Id;
 	}
 
 	public String getTitle() {

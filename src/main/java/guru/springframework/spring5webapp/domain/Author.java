@@ -23,9 +23,8 @@ public Author() {
 	super();
 }
 
-public Author(long id, String firstName, String lastName) {
+public Author(String firstName, String lastName) {
 	super();
-	Id = id;
 	this.firstName = firstName;
 	this.lastName = lastName;
 }
@@ -34,9 +33,6 @@ public Long getId() {
 	return Id;
 }
 
-public void setId(Long id) {
-	Id = id;
-}
 
 public String getFirstName() {
 	return firstName;
