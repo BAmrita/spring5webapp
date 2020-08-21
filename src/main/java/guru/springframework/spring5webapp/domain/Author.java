@@ -82,7 +82,6 @@ public String toString() {
     "id=" + Id +
     ", firstName='" + firstName + '\'' +
     ", lastName='" + lastName + '\'' +
-    ", books=" + books +
     '}';
 }
 

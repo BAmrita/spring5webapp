@@ -17,11 +17,22 @@ public class Book {
 	@JoinTable(name="author_book",joinColumns = @JoinColumn(name="book_id"), 
 	inverseJoinColumns = @JoinColumn(name="author_id"))
 	private Set<Author> authors= new HashSet<Author>();
+	
+	@ManyToOne
+	private Publisher publisher;
 
 	public Book(String title, String isBn) {
 		super();
 		this.title = title;
 		this.isBn = isBn;
+	}
+
+	public Publisher getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(Publisher publisher) {
+		this.publisher = publisher;
 	}
 
 	public Long getId() {
@@ -76,8 +87,11 @@ public class Book {
 	    "id=" + Id +
 	    ", Title='" + title + '\'' +
 	    ", isBn='" + isBn + '\'' +
-	    ", author=" + authors +
 	    '}';
+	}
+
+	public Book() {
+		super();
 	}
 	
 }
